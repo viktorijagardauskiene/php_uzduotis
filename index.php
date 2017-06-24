@@ -31,11 +31,12 @@
 		<?php
 		// parasyti funkcija get_area(), kuri grazintu baseino sienu plota pagal perduodamus atributus
 		
-		$ilgis=50;
+		$ilgis=50; 
 		$plotis=10;
 
-		for ($gylis=0; $gylis < 5 ; $gylis++) { 
+		for ($gylis=1; $gylis < 5 ; $gylis++) { 
 			echo "Mums reikės " . get_area($ilgis, $plotis, $gylis)." kv.m.plytelių."."<br />";
+			// jei nenurodyta kintamuju reiksme atskirai, tai funkcijos get_area skliausteliuose nurodom skaicius, is eiles kaip numatyta funkcijoje (kitam faile) 
 		}
 		
 		?>
