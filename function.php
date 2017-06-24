@@ -7,3 +7,16 @@
 	   		}
 	   }
 ?>
+
+<?php
+//uzduotis baseinas
+	function get_area($ilgis,$plotis,$gylis) {
+		
+		
+		$pavirsiaus_plotas=($ilgis*$plotis)+2*($gylis*$plotis)+2*($gylis*$ilgis);
+		return $pavirsiaus_plotas;
+
+
+	}
+
+?>

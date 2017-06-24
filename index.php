@@ -18,14 +18,30 @@
 			display: block;
 			float: left;
 			margin: 1px;
-
 			}
 
 	</style>
 </head>
 <body>
 	<div class="container">
-		<?php print_cells(400); ?>
+		
+
+		<div class="baseinas">
+		
+		<?php
+		// parasyti funkcija get_area(), kuri grazintu baseino sienu plota pagal perduodamus atributus
+		
+		$ilgis=50;
+		$plotis=10;
+
+		for ($gylis=0; $gylis < 5 ; $gylis++) { 
+			echo "Mums reikės " . get_area($ilgis, $plotis, $gylis)." kv.m.plytelių."."<br />";
+		}
+		
+		?>
+
+		</div>
+
 
 	</div>
 		

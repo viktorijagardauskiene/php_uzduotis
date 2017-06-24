@@ -37,5 +37,7 @@ echo "<br>Kaina " . $kaina;
 rand(nuo, iki);
 mt_rand(nuo, iki);
 
+// aptana studio ir php storm pasibandyti programa vietoj sublime
+
 
 
