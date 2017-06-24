@@ -13,10 +13,11 @@
    	<style>
 		.langelis {
 			width: 40px;
-			padding: 15px;
+			padding: 10px;
 			background-color: gray;
 			display: block;
 			float: left;
+			margin: 1px;
 
 			}
 
