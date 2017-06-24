@@ -19,19 +19,13 @@
 			float: left;
 			margin: 1px;
 			}
-		.temperatura, th, td {
-			border-color: black;
-			border: solid;
-			padding: 2px;
-		}
-
 	</style>
 </head>
 <body>
-	<div class="container">
+<div class="container">
 		
 
-		<div class="baseinas">
+	<div class="baseinas">
 		
 		<?php
 		// parasyti funkcija get_area(), kuri grazintu baseino sienu plota pagal perduodamus atributus
@@ -45,35 +39,40 @@
 		}
 		
 		?>
+	</div>
 
-		<div class="oro_temperatura">
-		<?php
-			// if...else... uzduotis apie oro temperatura
-			/* uzduotis: parasyti get_feel() funkcija kuri grazintu :
-			karsta , kai temperatura aukstesne nei 30 laipsniu;
-			silta , kai temperatura tarp 15 ir 30 laipsniu;
-			vesu , kai temperatura 5 ir 14 laipsniu */
-			
-		?>
+	<div class="oro_temperatura">
+			<?php
+				// if...else... uzduotis apie oro temperatura
+				/* uzduotis: parasyti get_feel() funkcija kuri grazintu :
+				karsta , kai temperatura aukstesne nei 30 laipsniu;
+				silta , kai temperatura tarp 15 ir 30 laipsniu;
+				vesu , kai temperatura 5 ir 14 laipsniu */
+				
+			?>
 
-		<table class="temperatura">
-			<th>Temperatūra</th>
-			<th>Pojūtis</th>
-		<?php
-			for ($temp=0; $temp <= 30 ; $temp++) { 
-			echo "<tr><td>".$temp."</td><td>".get_feel($temp)."</td></tr>";
-			}
-		?>
-		</table>
-
-
-
-		</div>
-
-		</div>
-
+			<table class="table table-bordered">
+				<th>Temperatūra</th>
+				<th>Pojūtis</th>
+					<?php
+						for ($temp=0; $temp <= 30 ; $temp++) { 
+						if (get_feel($temp) == "karšta") {
+							$class = "danger";
+						} elseif (get_feel($temp) == "šilta") {
+							$class = "success";
+						} elseif (get_feel($temp) == "vėsu") {
+							$class = "warning";
+						} elseif (get_feel($temp) == "šalta") {
+							$class = "info";
+						}
+						
+						echo "<tr class=".$class."><td>".$temp."</td><td>".get_feel($temp)."</td></tr>";
+						}
+					?>
+			</table>
 
 	</div>
-		
+
+</div>
 </body>
 </html>
