@@ -19,6 +19,11 @@
 			float: left;
 			margin: 1px;
 			}
+		.temperatura, th, td {
+			border-color: black;
+			border: solid;
+			padding: 2px;
+		}
 
 	</style>
 </head>
@@ -41,18 +46,25 @@
 		
 		?>
 
-		<div class="oro temperatura">
+		<div class="oro_temperatura">
 		<?php
-		// if...else... uzduotis apie oro temperatura
-		/* uzduotis: parasyti get_feel() funkcija kuri grazintu :
-		karsta , kai temperatura aukstesne nei 30 laipsniu;
-		silta , kai temperatura tarp 15 ir 30 laipsniu;
-		vesu , kai temperatura 5 ir 14 laipsniu */
-		
-		echo "Šiandien lauke yra ".get_feel(17.5);
-
-
+			// if...else... uzduotis apie oro temperatura
+			/* uzduotis: parasyti get_feel() funkcija kuri grazintu :
+			karsta , kai temperatura aukstesne nei 30 laipsniu;
+			silta , kai temperatura tarp 15 ir 30 laipsniu;
+			vesu , kai temperatura 5 ir 14 laipsniu */
+			
 		?>
+
+		<table class="temperatura">
+			<th>Temperatūra</th>
+			<th>Pojūtis</th>
+		<?php
+			for ($temp=0; $temp <= 30 ; $temp++) { 
+			echo "<tr><td>".$temp."</td><td>".get_feel($temp)."</td></tr>";
+			}
+		?>
+		</table>
 
 
 
