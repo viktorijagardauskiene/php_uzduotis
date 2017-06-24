@@ -19,6 +19,10 @@
 			float: left;
 			margin: 1px;
 			}
+		.eilute {
+			border-color: black !important;
+			
+		}
 	</style>
 </head>
 <body>
@@ -50,10 +54,12 @@
 				vesu , kai temperatura 5 ir 14 laipsniu */
 				
 			?>
-
-			<table class="table table-bordered">
-				<th>Temperatūra</th>
-				<th>Pojūtis</th>
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+	<table class="table table-bordered">
+				<th class='eilute'>Temperatūra</th>
+				<th class='eilute'>Pojūtis</th>
 					<?php
 						for ($temp=0; $temp <= 30 ; $temp++) { 
 						if (get_feel($temp) == "karšta") {
@@ -66,10 +72,14 @@
 							$class = "info";
 						}
 						
-						echo "<tr class=".$class."><td>".$temp."</td><td>".get_feel($temp)."</td></tr>";
+						echo "<tr class=".$class."><td class='eilute'>".$temp."</td><td class='eilute'>".get_feel($temp)."</td></tr>";
 						}
 					?>
 			</table>
+</div>
+			
+<div class="col-md-4"></div>
+</div>
 
 	</div>
 
