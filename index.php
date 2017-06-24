@@ -41,6 +41,23 @@
 		
 		?>
 
+		<div class="oro temperatura">
+		<?php
+		// if...else... uzduotis apie oro temperatura
+		/* uzduotis: parasyti get_feel() funkcija kuri grazintu :
+		karsta , kai temperatura aukstesne nei 30 laipsniu;
+		silta , kai temperatura tarp 15 ir 30 laipsniu;
+		vesu , kai temperatura 5 ir 14 laipsniu */
+		
+		echo "Šiandien lauke yra ".get_feel(17.5);
+
+
+		?>
+
+
+
+		</div>
+
 		</div>
 
 
