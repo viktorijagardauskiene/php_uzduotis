@@ -6,14 +6,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
 		td {
-			padding: 10px;
+			padding: 15px;
 			border-color: white;
 			border: solid;
 			background-color: black;
+			color: white;
 			}
 
 		table {
-			border-color: black;
+			border-color: white;
 			border: solid;
 			}
 
