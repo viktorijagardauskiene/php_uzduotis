@@ -39,5 +39,7 @@ mt_rand(nuo, iki);
 
 // aptana studio ir php storm pasibandyti programa vietoj sublime
 
+// ND 06.24 baseino turis. funkcija $turis = get_volume($ilgis, $plotis, $gylis), $sunkvezimiai = get_trucks($turis, $sunkvezimio_turis)
 
+// priklausomai nuo baseino ilgio skaiciuoja kiek reikia sunkvezimiu sudeti i lentele echo $sunkvezimiai
 
