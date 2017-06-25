@@ -27,59 +27,29 @@
 </head>
 <body>
 <div class="container">
-		
-
-	<div class="baseinas">
-		
-		<?php
-		// parasyti funkcija get_area(), kuri grazintu baseino sienu plota pagal perduodamus atributus
-		
-		$ilgis=50; 
-		$plotis=10;
-
-		for ($gylis=1; $gylis < 5 ; $gylis++) { 
-			echo "Mums reikės " . get_area($ilgis, $plotis, $gylis)." kv.m.plytelių."."<br />";
-			// jei nenurodyta kintamuju reiksme atskirai, tai funkcijos get_area skliausteliuose nurodom skaicius, is eiles kaip numatyta funkcijoje (kitam faile) 
-		}
-		
-		?>
-	</div>
-
+			
 	<div class="oro_temperatura">
-			<?php
-				// if...else... uzduotis apie oro temperatura
-				/* uzduotis: parasyti get_feel() funkcija kuri grazintu :
-				karsta , kai temperatura aukstesne nei 30 laipsniu;
-				silta , kai temperatura tarp 15 ir 30 laipsniu;
-				vesu , kai temperatura 5 ir 14 laipsniu */
-				
-			?>
-<div class="row">
-<div class="col-md-4"></div>
-<div class="col-md-4">
-	<table class="table table-bordered">
-				<th class='eilute'>Temperatūra</th>
-				<th class='eilute'>Pojūtis</th>
+			
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<table class="table table-bordered">
+				<th class='eilute'>Baseino gylis</th>
+				<th class='eilute'>Tūris</th>
+				<th class='eilute'>Autocisternų kiekis</th>
 					<?php
-						for ($temp=0; $temp <= 30 ; $temp++) { 
-						if (get_feel($temp) == "karšta") {
-							$class = "danger";
-						} elseif (get_feel($temp) == "šilta") {
-							$class = "success";
-						} elseif (get_feel($temp) == "vėsu") {
-							$class = "warning";
-						} elseif (get_feel($temp) == "šalta") {
-							$class = "info";
-						}
-						
-						echo "<tr class=".$class."><td class='eilute'>".$temp."</td><td class='eilute'>".get_feel($temp)."</td></tr>";
+					for ($gylis=1; $gylis <= 30 ; $gylis++) { 			
+					
+						$auto_sk=ceil(baseino_turis($ilgis,$plotis,$gylis)/$auto_turis);
+				
+						echo "<tr><td class='eilute'>".$gylis." m."."</td><td class='eilute'>".baseino_turis($ilgis,$plotis,$gylis)." kv. m."."</td><td class='eilute'>". $auto_sk." vnt."."</td></tr>";
 						}
 					?>
 			</table>
-</div>
+		</div>
 			
-<div class="col-md-4"></div>
-</div>
+		<div class="col-md-2"></div>
+	</div>
 
 	</div>
 
