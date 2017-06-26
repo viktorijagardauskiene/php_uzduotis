@@ -34,6 +34,21 @@ function spausdinti($masyvas) { // atskira funkcija atspausdina masyvo elementus
 
 spausdinti($skaiciai);
 
+echo "<br />";
+
+// uzduotis sukurti funkcija kuri atspausdintu masyvo elementus kaip sarasa <ul>
+
+$gerimai = ["Vanduo", "Sultys", "Arbata", "Kava", "Pienas"];
+
+function atspausdinti_sarasa($masyvas) {
+ foreach ($masyvas as $elementas) {
+ 	echo "<ul><li>" . strtoupper($elementas) . "</li></ul>";
+ }
+
+}
+echo "Gėrimai";
+atspausdinti_sarasa($gerimai);
+
 
 ?>
 </pre>
