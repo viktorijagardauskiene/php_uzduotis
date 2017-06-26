@@ -11,12 +11,23 @@
 for ($i=1; $i <= 10 ; $i++) { 
 	$rezultatas = 3*$i;
 
-	echo sprintf("3 kart %s yra %s <br />", $i , $rezultatas); // string print format (sprintf) %s yra kintamasis, kuris nurodytas toliau skliausteliuose, o funkcija įterps juos rodydama.
+	echo sprintf("3 kart %u yra %u <br />", $i , $rezultatas); // string print format (sprintf) %s (su procento zenklu) yra kintamasis, kuris nurodytas toliau skliausteliuose, o funkcija įterps juos rodydama.
 }
-
 
 ?>
 
+<pre>
+<?php
+
+$skaiciai = [22, 33, 44, 55, 66];
+print_r($skaiciai); // dazniausiai naudojamas
+echo "<br />";
+var_dump($skaiciai);
+echo "<br />";
+var_export($skaiciai); // grazina objekta
+
+?>
+</pre>
 
 </body>
 </html>
