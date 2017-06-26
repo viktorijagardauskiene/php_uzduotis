@@ -20,25 +20,20 @@ for ($i=1; $i <= 10 ; $i++) {
 <?php
 
 $skaiciai = [22, 33, 44, 55, 66];
-print_r($skaiciai); // dazniausiai naudojamas
 
-echo $skaiciai[0] . "<br />";
+for ($i=0; $i < count($skaiciai) ; $i++) { // masyvo $skaiciai kiekviena elementa padaugina is dvieju
+	$skaiciai[$i] = $skaiciai[$i]*2;
+}
+print_r($skaiciai); // atspausdina masyvio elementus
 
-$skaiciai[0] = 11;
-
-print_r($skaiciai); // cia negraziai atspausdina masyvo reiksmes 
-
-echo "<br />";
-
-for ($i=0; $i < count($skaiciai); $i++) { // atspausdina masyvo reiksmes 
-	echo $skaiciai[$i] . "<br />";
+function spausdinti($masyvas) { // atskira funkcija atspausdina masyvo elementus
+	foreach ($masyvas as $elementas) { 
+	echo $elementas . "<br />";
+}
 }
 
-echo "<br />";
+spausdinti($skaiciai);
 
-foreach ($skaiciai as $kitas) { // ir cia atspausdina masyvo reiksmes
-	echo $kitas . "<br />";
-}
 
 ?>
 </pre>
