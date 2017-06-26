@@ -21,10 +21,24 @@ for ($i=1; $i <= 10 ; $i++) {
 
 $skaiciai = [22, 33, 44, 55, 66];
 print_r($skaiciai); // dazniausiai naudojamas
+
+echo $skaiciai[0] . "<br />";
+
+$skaiciai[0] = 11;
+
+print_r($skaiciai); // cia negraziai atspausdina masyvo reiksmes 
+
 echo "<br />";
-var_dump($skaiciai);
+
+for ($i=0; $i < count($skaiciai); $i++) { // atspausdina masyvo reiksmes 
+	echo $skaiciai[$i] . "<br />";
+}
+
 echo "<br />";
-var_export($skaiciai); // grazina objekta
+
+foreach ($skaiciai as $kitas) { // ir cia atspausdina masyvo reiksmes
+	echo $kitas . "<br />";
+}
 
 ?>
 </pre>
