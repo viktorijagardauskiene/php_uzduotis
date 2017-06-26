@@ -40,14 +40,19 @@ echo "<br />";
 
 $gerimai = ["Vanduo", "Sultys", "Arbata", "Kava", "Pienas"];
 
-function atspausdinti_sarasa($masyvas) {
- foreach ($masyvas as $elementas) {
- 	echo "<ul><li>" . strtoupper($elementas) . "</li></ul>";
- }
 
+// uzduotis sukurti funkcija kuri atspausdins random gerima kiekviena karta vis kita
+
+function random_gerimas($gerimai) {
+
+$gerimas = strtolower($gerimai[rand(0, count($gerimai)-1)]);
+
+
+echo sprintf("Mano mėgstamiausias gėrimas yra %s", $gerimas) . ".";
 }
-echo "Gėrimai";
-atspausdinti_sarasa($gerimai);
+
+random_gerimas($gerimai);
+
 
 
 ?>
