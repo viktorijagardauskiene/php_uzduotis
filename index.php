@@ -73,8 +73,23 @@ foreach ($users as $kitas) { // grazina kiekvieno masyvo name ir surname element
 	echo $kitas["name"]. " " . $kitas["surname"]."<br />";
 }
 
+// uzduotis namu darbams 
+/* Suvesti i masyva troskinio sudeti:
+jautiena 250 g
+pupeles 500 g
+vanduo 500g
+pomidorai 300g
+paprika 100 g
+
+1. parasyti funkcija kuri atspausdintu visus elementus lenteleje 
+2. parasyti funkcija kuri atspausdintu "jautienos receptui mums reikes xxx gramu zzz, taip pat xxx gramu bbb....."
+3. parasyti funkcija kuri suskaiciuotu kiek svers visi produktai
+4. parasyti funkcija kuri patikrintu ar vandens ne maziau nei pupeliu */
+
+
 ?>
 </pre>
 
 </body>
 </html>
+
