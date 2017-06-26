@@ -48,12 +48,30 @@ function random_gerimas($gerimai) {
 $gerimas = strtolower($gerimai[rand(0, count($gerimai)-1)]);
 
 
-echo sprintf("Mano mėgstamiausias gėrimas yra %s", $gerimas) . ".";
+echo sprintf("Mano mėgstamiausias gėrimas yra %s", $gerimas) . "."; 
 }
 
 random_gerimas($gerimai);
 
+echo "<br />";
 
+$users = [];
+$user1 = ["name" => "Petras", "surname" => "Jonaitis",];
+$user2 = ["name" => "Mantas", "surname" => "Eimaitis",];
+
+array_push($users, $user1, $user2); // masyve $users yra kiti du masyvai (su savo elementais) Masyve[masyvas];
+
+print_r($users);
+
+echo "<br />";
+
+echo $users[0]["name"]; // nurodo masyve esancio pirmojo masyvo "name" elementa
+
+echo "<br />";
+
+foreach ($users as $kitas) { // grazina kiekvieno masyvo name ir surname elementu reiksmes
+	echo $kitas["name"]. " " . $kitas["surname"]."<br />";
+}
 
 ?>
 </pre>
