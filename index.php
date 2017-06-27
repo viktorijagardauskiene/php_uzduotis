@@ -39,10 +39,12 @@ function lentele($produktai) {
 
 function receptas($produktai) {
 foreach ($produktai as $prod => $kiekis) {
-print_r($kiekis);
+
+	echo sprintf("Jautienos troškiniui pagaminti mums reikės gramų %s, taip pat  gramų %s, be to mililitrų %s, gramų %s ir gramų %s", );	
+	}
 
 
-//echo sprintf("Jautienos troškiniui pagaminti mums reikės %i gramų %s, taip pat %i gramų %s, be to %i mililitrų %s, %i gramų %s ir %i gramų %s",  ;
+
 
 }
 }
