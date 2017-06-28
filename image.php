@@ -28,7 +28,7 @@ $hp = 0;
 foreach ($img as $element) {
 	echo '<div class="'. $element .'"></div>'; // $element yra kaip klases pavadinimas, todel tiek kabuciu
 	$hp++; // hp skaiciuoja kiek ciklu
-		if($hp == 3) { // po trecio ciklo perkelia i kita eilute
+		if($hp == 3) { // po trecio ciklo perkelia i kita eilute, dviguba lygybe nes tikrinam reiksme o ne priskiriam kaip kintamajam
 			echo "<br /><br /><br />";
 			$hp = 0; // grazina hp reiksme i 0
 		}
@@ -43,4 +43,13 @@ foreach ($img as $kortele) {
 }
 echo "<br />";
 echo "Mums reikes ".$juodos_korteles." juodu korteliu.";
+
+
+if ($sum > 6 && $a != $b) { // && AND, != arba <> nelygu
+	echo "Suma didesne uz 6 ir 'kauliukai skirtingi'"
+
+	// || OR  (mygtukas virs enter)
+
+	
+}
 ?>
