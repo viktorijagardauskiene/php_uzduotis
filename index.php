@@ -38,16 +38,17 @@ function lentele($produktai) {
 }
 
 function receptas($produktai) {
-foreach ($produktai as $prod => $kiekis) {
 
-	echo sprintf("Jautienos troškiniui pagaminti mums reikės gramų %s, taip pat  gramų %s, be to mililitrų %s, gramų %s ir gramų %s", );	
-	}
+$tik_produktai = array_keys($produktai);
+$tik_kiekis = array_values($produktai);
+// for ($i=0; $i < count($tik_produktai); $i++) { 
+ //	if 
+ 
 
-
-
-
+//	echo sprintf("Jautienos troškiniui pagaminti mums reikės %i gramų %s, ",  " taip pat %i gramų %s, be to %i gramų %s, %i gramų %s ir %i gramų %s",  );	
+//	}
 }
-}
+
 ?>
 
 <div class="container">
@@ -62,7 +63,8 @@ foreach ($produktai as $prod => $kiekis) {
 <?php 
 
 	receptas($produktai); 
-
+echo "<br />";
+echo "Visų produktų bendras svoris yra " . array_sum($produktai);
 ?>
 
 </div>
