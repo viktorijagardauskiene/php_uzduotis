@@ -28,10 +28,18 @@
 
 <?php
 
-$img = ["y", "y", "g", "g", "r", "r"];
+$img = ["y", "y", "y", "y", "g", "g", "g", "g", "r", "r" , "r", "r"];
+
+$hp = 0;
 
 foreach ($img as $element) {
 	echo '<div class="'. $element .'">' . $element . '</div>'; // $element yra kaip klases pavadinimas, todel tiek kabuciu
+	$hp++;
+		if($hp == 4) {
+			echo "<br /><br />";
+			$hp = 0;
+		}
+
 }
 
 ?>
